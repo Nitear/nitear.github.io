@@ -105,8 +105,8 @@ header {
 }
 .person-img img{
    
-    margin-right: 8rem;
-    width: 400px;
+    margin-right: 6rem;
+    width: 468px;
     height: 468px;
 }
 .contact-me{
@@ -123,7 +123,7 @@ header {
     padding: 0.625rem .75rem;
     border-radius: 5px;
 }
-.BERRIES{
+.about-me{
     background-color: #1d1d1d;
     display:  flex;
     flex-direction: column;
@@ -132,13 +132,13 @@ header {
     color: #fff;
     gap: 1rem;
 }
-.BERRIES p{
-    font-size: 0.6875rem;
+.about-me p{
+    font-size: 1rem;
     line-height: 1rem;
     color: #909090;
 }
-.BERRIES span{
-    font-size: 0.6875rem;
+.about-me span{
+    font-size: 1rem;
     line-height: 1rem;
     color: #d7d7d7;
     border-inline: 1px solid #d7d7d7;
@@ -148,14 +148,20 @@ header {
     display: none;
 }
 .aboutme{
-    margin-top: 8.875rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
 }
 .aboutme p{
-    font-size: 0.6875rem;
+    font-size: 1    rem;
+    line-height: 1rem;
+    color: black;
+}
+
+.aboutme h5{
+    font-size: 1.5em;
     line-height: 1rem;
     color: black;
 }
@@ -173,7 +179,7 @@ header {
     padding: 0.5rem 1rem;
 }
 .header-info h6{
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     border-inline: 2px solid #000;
     padding-inline: 1rem;
@@ -194,21 +200,29 @@ header {
 
 }
 .skills{
-    margin-top: 8.875rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
 }
-.using-now, .learning-now, .other-skills{
+
+.projects{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.tech_stack, .learning-now, .other-skills{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.using-now, .learning-now, .other-skills h4{
+.tech_stack, .learning-now, .other-skills h4{
     font-size: 1.5rem;
 }
-.grid-skills{
+.grid-tech-stack{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     row-gap: 3rem;
@@ -225,15 +239,8 @@ header {
     width: 90px;
     height: 100px;
 }
-.portfolio{
-    margin-top: 8.875rem;
-    display: flex;
-    flex-direction: column;
-}
-.header-img{
-    height: 10rem;
-    background: url(./images/Section\ Header.png) center / cover  no-repeat;
-}
+
+
 .grid-header{
     background-color: #1c1918;
     height: 3rem;
@@ -280,7 +287,7 @@ header {
     background:url(./images/Project.png) center / cover  no-repeat; ;
 }
 .contact{
-    margin-top: 8.875rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -441,3 +448,9 @@ footer{
         width: 100%;
     }
 }
+
+.project-img {
+    width: 50%; 
+    height: auto; 
+}
+
