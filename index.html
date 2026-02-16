@@ -127,28 +127,54 @@
                 <h4>Projects</h4>
                 <h6>Marahuyo - Thesis Project</h6>
                 <p>February 2025 – November 2025</p>
-                <img class="project-img" src="./images/img_placeholder.png" alt="image placeholder">
+
+                <section class="slider">
+                    <div class="slides">
+                        <img src="./images/img_placeholder.png" class="slide active">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </section>
+                
                 <br> A 3D narrative mobile game exploring Filipino mythological creatures and moral lessons, featuring procedurally 
                 generated environments to increase replayability and interactive gameplay. 
                 <img src="./images/separatorBlack 1.png" alt="">
                 
                 <h6>Moodoro - Academic Project</h6>
                 <p>September 2024 – November 2024</p>
-                <img class="project-img" src="./images/img_placeholder.png" alt="image placeholder">
+                <section class="slider">
+                    <div class="slides">
+                        <img src="./images/img_placeholder.png" class="slide active">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </section>
                 <br> A web-based mood tracking application that records users’ emotions before and after completing tasks. The system 
                 provides analytics and visual feedback to help users understand their emotional patterns over time. 
                 <img src="./images/separatorBlack 1.png" alt="">
 
                 <h6>Quiz Buddy - Academic Project</h6>
                 <p>February 2024 – April 2024 </p>
-                <img class="project-img" src="./images/img_placeholder.png" alt="image placeholder">
+                <section class="slider">
+                    <div class="slides">
+                        <img src="./images/img_placeholder.png" class="slide active">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </section>
                 <br> A mobile application that provides flashcards for reviewing quiz items and allows users to take quizzes with 
                 randomized questions for practice and learning reinforcement.
                 <img src="./images/separatorBlack 1.png" alt="">
 
                 <h6>Advensure - Academic Project</h6>
                 <p>September 2023 – December 2024</p>
-                <img class="project-img" src="./images/img_placeholder.png" alt="image placeholder">
+                <section class="slider">
+                    <div class="slides">
+                        <img src="./images/img_placeholder.png" class="slide active">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </section>
                 <br> A front-end only website for a travel agency, designed to display services, destinations, and contact information of 
                 booking for users. 
                 <img src="./images/separatorBlack 1.png" alt="">
@@ -200,5 +226,32 @@
             }
         })
     </script>
+
+    <script>
+    document.querySelectorAll('.slider').forEach(slider => {
+        const slides = slider.querySelectorAll('.slide');
+        const nextBtn = slider.querySelector('.next');
+        const prevBtn = slider.querySelector('.prev');
+
+        let current = 0;
+
+        function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+        });
+
+        prevBtn.addEventListener('click', () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+        });
+    });
+    </script>
+
+
 </body>
 </html>

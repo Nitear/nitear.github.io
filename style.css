@@ -348,6 +348,53 @@ footer{
     line-height: 1rem;
     color: #d7d7d7;
 }
+
+.project-img {
+    width: 50%; 
+    height: auto; 
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 @media (max-width: 768px){
     header{
         margin-top: 0;
@@ -449,8 +496,4 @@ footer{
     }
 }
 
-.project-img {
-    width: 50%; 
-    height: auto; 
-}
 
