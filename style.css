@@ -471,28 +471,16 @@ footer{
         justify-content: center;
         color: #fff;
     }
-    .grid-skills{
+    .grid-tech-stack{
         grid-template-columns: repeat(2,1fr);
-    }
-    .grid-port{
-        grid-template-columns: repeat(2,1fr);
-    }
-    form input{
-        width: 90%;
     }
 }
 @media (max-width: 480px){
     .grid-about{
         grid-template-columns: 1fr;
     }
-    .grid-skills{
+    .grid-tech-stack{
         grid-template-columns: 1fr;
-    }
-    .grid-port{
-        grid-template-columns: 1fr;
-    }
-    form input{
-        width: 100%;
     }
 }
 
