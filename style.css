@@ -10,7 +10,6 @@
 body {
     font-family: "Inter", sans-serif;
     background-color:#d7d7d7;
-
 }
 
 header {
@@ -24,8 +23,15 @@ header {
 }
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: black;  
+    width: 100%;
+    height: 7.5vh;
+    color: white;
+    z-index: 100;
     
 }
 .navbar .mobile-logo{
@@ -49,7 +55,7 @@ header {
 }
 .nav-links li a{
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1rem;
@@ -62,7 +68,7 @@ header {
     padding: 10px 25px;
     border-radius: 20px;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1rem;
     cursor: pointer;
 }
@@ -75,15 +81,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5vh;
 }
-.bg-img img{
-    width: 60%;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
+
 .hero-top .content{
     display: flex;
     flex-direction: column;
@@ -105,9 +105,13 @@ header {
 }
 .person-img img{
    
-    margin-right: 6rem;
+    margin-right: 10%;
     width: 468px;
     height: 468px;
+    border-radius: 50%;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
 }
 .contact-me{
     display: flex;
@@ -128,7 +132,7 @@ header {
     display:  flex;
     flex-direction: column;
     align-items: self-start;
-    padding: 2rem 3rem;
+    padding: 3rem 3rem;
     color: #fff;
     gap: 1rem;
 }
@@ -145,7 +149,7 @@ header {
     padding-inline: 0.5rem;
 }
 .humburger{
-    display: none;
+    display: block;
 }
 .aboutme{
     margin-top: 4rem;
@@ -162,7 +166,6 @@ header {
 
 .aboutme h5{
     font-size: 1.5em;
-    line-height: 1rem;
     color: black;
 }
 .header-info{
@@ -402,8 +405,9 @@ footer{
        height: 3rem;
     }
     .navbar{
-        height: 100%;
         align-items: center;
+        position: relative;
+
     }
     .navbar .logo{
         display: none;
@@ -414,20 +418,21 @@ footer{
         height:2rem ; 
     }
     .nav-links{
-        height: 210px;
+        height: 300px;
         position: absolute;
         left: 0;
         right: 0;
-        background-color:#1c1918;
-        margin-top: 16rem;
+        background-color:black;
+        top: 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         border-top:1px solid #d7d7d7 ;
-        padding-top: 2rem;
+        padding-top: 1rem;
         gap: 2rem;
         transition: transform 100ms ease-in-out ;
+
     }
     .nav-links .btn{
         width: 100%;
@@ -448,6 +453,7 @@ footer{
     }
     .humburger i[data-visible="true"]{
         display: block;
+        z-index: 101;
     }
     .nav-links[data-visible="false"]{
         transform: translateY(-145%);
